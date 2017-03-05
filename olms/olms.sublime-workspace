@@ -1,0 +1,378 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"p",
+				"password"
+			],
+			[
+				"H",
+				"HttpResponseNotFound"
+			],
+			[
+				"r",
+				"rango"
+			],
+			[
+				"f",
+				"from"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"inn",
+				"Including"
+			],
+			[
+				"ulrs",
+				"urls"
+			],
+			[
+				"h",
+				"HttpResponse"
+			],
+			[
+				"A",
+				"alert"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"co",
+				"container"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"c",
+				"container"
+			],
+			[
+				"bod",
+				"border"
+			],
+			[
+				"ma",
+				"max-height"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"al",
+				"align-self"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"backgro",
+				"background-color"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"_",
+				"_password"
+			],
+			[
+				"col",
+				"col-xs-4"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"o",
+				"objects"
+			],
+			[
+				"Joi",
+				"Join"
+			],
+			[
+				"for",
+				"forms"
+			],
+			[
+				"Join",
+				"JoinAdmin"
+			],
+			[
+				"T",
+				"TEMPLATES"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				"Syntax Check"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 152.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 418.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/wiz/miniproject/olms",
+		"/home/wiz/miniproject/olms/static",
+		"/home/wiz/miniproject/olms/static/images",
+		"/home/wiz/miniproject/olms/user_login"
+	],
+	"file_history":
+	[
+		"/home/wiz/miniproject/olms/user_login/views.py",
+		"/home/wiz/miniproject/olms/olms/urls.py",
+		"/home/wiz/miniproject/olms/user_login/urls.py",
+		"/home/wiz/miniproject/olms/olms/settings.py",
+		"/home/wiz/miniproject/olms/user_login/migrations/views.py",
+		"/home/wiz/lwc/tango_withdjango_project/templates/userlogin/welcome.html",
+		"/home/wiz/lwc/tango_withdjango_project/templates/userlogin/base.html",
+		"/home/wiz/lwc/tango_withdjango_project/tango_withdjango_project/urls.py",
+		"/home/wiz/lwc/tango_withdjango_project/rango/urls.py",
+		"/home/wiz/lwc/tango_withdjango_project/rango/views.py",
+		"/home/wiz/lwc/tango_withdjango_project/userlogin/urls.py",
+		"/home/wiz/lwc/tango_withdjango_project/login/urls.py",
+		"/home/wiz/lwc/tango_withdjango_project/templates/rango/index.html",
+		"/home/wiz/aliproj/MiniProject/src/accounts/static/css/style.css",
+		"/home/wiz/lwc/tango_withdjango_project/rango/models.py",
+		"/home/wiz/lwc/tango_withdjango_project/rango/admin.py",
+		"/home/wiz/lwc/tango_withdjango_project/populate_rango.py",
+		"/home/wiz/lwc/tango_withdjango_project/populate_range.py",
+		"/home/wiz/lwc/tango_withdjango_project/templates/rango/base.html",
+		"/home/wiz/hackerearth/swap2.c",
+		"/home/wiz/lwc/tango_withdjango_project/tango_withdjango_project/settings.py",
+		"/home/wiz/lwc/tango_withdjango_project/static/admin/css/forms.css",
+		"/home/wiz/lwc/src/src/urls.py",
+		"/home/wiz/jsproj/websites/form.css",
+		"/home/wiz/jsproj/form.html",
+		"/home/wiz/jsproj/websites/temp_site/base.html",
+		"/home/wiz/jsproj/websites/base.html",
+		"/home/wiz/jsproj/websites/temp_site/validate.js",
+		"/home/wiz/lwc/forms/templates/base.html",
+		"/home/wiz/lwc/src/templates/home.html",
+		"/home/wiz/jsproj/base.html",
+		"/home/wiz/lwc/forms/form/views.py",
+		"/home/wiz/lwc/forms/form/pswd_hash.py",
+		"/home/wiz/lwc/src/joins/forms.py",
+		"/home/wiz/lwc/src/joins/views.py",
+		"/home/wiz/lwc/src/joins/models.py",
+		"/home/wiz/lwc/src/joins/apps.py",
+		"/home/wiz/lwc/src/joins/admin.py",
+		"/home/wiz/lwc/src/templates/navbar.html",
+		"/home/wiz/lwc/src/src/views.py",
+		"/home/wiz/lwc/src/templates/base.html",
+		"/home/wiz/lwc/src/src/settings.py",
+		"/home/wiz/lwc/src/joins/__init__.py",
+		"/home/wiz/django_info/templates/launch-with-code/templates/base.html",
+		"/home/wiz/lwc/src/src/templates/home.html",
+		"/home/wiz/lwc/src/homepage/models.py",
+		"/home/wiz/lwc/src/homepage/urls.py",
+		"/home/wiz/lwc/src/homepage/views.py",
+		"/home/wiz/lwc/src/homepage/index.html",
+		"/home/wiz/lwc/src/homepage/migrations/0001_initial.py",
+		"/home/wiz/lwc/src/homepage/apps.py",
+		"/home/wiz/lwc/src/homepg/views.py",
+		"/home/wiz/lwc/src/homepg/urls.py",
+		"/home/wiz/lwc/src/manage.py",
+		"/home/wiz/pyprog/pass.py",
+		"/home/wiz/pyprog/samp.py"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"STATICFILES_DIRS",
+			"django.contrib.st",
+			"email"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "olms.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
