@@ -6,13 +6,7 @@
    {% load staticfiles %}
   <link rel="stylesheet" type="text/css" href="{% static "user_login/css/form.css" %}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script type="text/javascript">
-    function checkempty(){
-      if(document.login.username.value==""||document.login.password.value==""){
-        alert("Username or Password can't be empty!!");
-      }
-    }  
-  </script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -29,15 +23,15 @@
   <div class="login">
   {% load staticfiles %}
     <img src="{% static "user_login/img/logo.png" %}" class="logo" alt="Mec Logo" />
-    <form name="LoginForm" action="/user/welcome/" method="POST">
+    <form name="LoginForm" action="/user/login/" method="POST">
     {% csrf_token %}
       <!-- <fieldset> -->
-    {% if next %}  
-        <input type="hidden" name="next" value="{{ next }}" />
-    {% endif %}    
-        <input type="text" id="username" name="username" placeholder="Username" />
-        <input type="password" id="password" name="password" placeholder="password" />
-        <input type="submit" name="submit_form" value="Sign in" onclick="checkempty()" />
+      <br>
+      {{ form }}
+      <br>
+       <!--  <input type="text" id="username" name="username" placeholder="Username" />
+        <input type="password" id="password" name="password" placeholder="password" /> -->
+        <input type="submit" name="submit_form" value="Sign in" />
       <!-- </fieldset>  -->
     </form>
   </div>
