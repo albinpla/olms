@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"u",
+				"user"
+			],
+			[
+				"is",
+				"is_active"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"re",
+				"registration"
+			],
+			[
 				"ti",
 				"title\tTag"
 			],
@@ -148,23 +164,44 @@
 	"buffers":
 	[
 		{
-			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n   {% load staticfiles %}\n  <link rel=\"stylesheet\" type=\"text/css\" href=\"{% static \"user_login/css/form.css\" %}\">\n  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n\n  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n  <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n</head>\n<body>\n<!-- <div class=\"container\">\n  <div class=\"jumbotron\" style=\"color:red\">\n  </div>\n</div> -->\n<div class=\"container-fluid tit\">\n  <h2>Welcome to Online Leave Management System</h2>\n</div>\n<!-- login box -->\n<center>\n  <div class=\"login\">\n  {% load staticfiles %}\n    <img src=\"{% static \"user_login/img/logo.png\" %}\" class=\"logo\" alt=\"Mec Logo\" />\n    <form name=\"LoginForm\" action=\"/user/login/\" method=\"POST\">\n    {% csrf_token %}\n      <!-- <fieldset> -->\n        <input type=\"text\" id=\"username\" name=\"username\" placeholder=\"Username\" />\n        <input type=\"password\" id=\"password\" name=\"password\" placeholder=\"password\" />\n        <input type=\"submit\" name=\"submit_form\" value=\"Sign in\" onclick=\"checkempty()\" />\n      <!-- </fieldset>  -->\n    </form>\n  </div>\n<center> \n<br><br>\n<!-- contact details -->\n<div class=\"container-fluid bg-grey\">\n  <h2 class=\"text-center\">CONTACT</h2>\n  <div class=\"row\">\n    <div class=\"col-sm-5\">\n      <p>Contact us and we'll get back to you within 24 hours.</p>\n      <p><span class=\"glyphicon \n      glyphicon-map-marker\"></span>Enter Address</p>\n      <p><span class=\"glyphicon glyphicon-phone\"></span> Enter Phone number</p>\n      <p><span class=\"glyphicon glyphicon-envelope\"></span> myemail@something.com</p> \n    </div>\n    <div class=\"col-sm-7\">\n      <div class=\"row\">\n        <div class=\"col-sm-6 form-group\">\n          <input class=\"form-control\" id=\"name\" name=\"name\" placeholder=\"Name\" type=\"text\" required>\n        </div>\n        <div class=\"col-sm-6 form-group\">\n          <input class=\"form-control\" id=\"email\" name=\"email\" placeholder=\"Email\" type=\"email\" required>\n        </div>\n      </div>\n      <textarea class=\"form-control\" id=\"comments\" name=\"comments\" placeholder=\"Comment\" rows=\"5\"></textarea><br>\n      <div class=\"row\">\n        <div class=\"col-sm-12 form-group\">\n          <button class=\"btn btn-default pull-right\" type=\"submit\">Send</button>\n        </div>\n      </div> \n    </div>\n  </div>\n</div>\n  \n</div>\n</body>\n</html>",
-			"file": "templates/user_login/home.html",
-			"file_size": 2771,
-			"file_write_time": 131332028171129096,
+			"file": "user_login/forms.py",
 			"settings":
 			{
-				"buffer_size": 2547,
+				"buffer_size": 668,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "user_login/forms.py",
+			"file": "user_login/urls.py",
 			"settings":
 			{
-				"buffer_size": 71,
+				"buffer_size": 191,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "user_login/views.py",
+			"settings":
+			{
+				"buffer_size": 1718,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/user_login/login.html",
+			"settings":
+			{
+				"buffer_size": 2572,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/user_login/welcome.html",
+			"settings":
+			{
+				"buffer_size": 104,
 				"line_ending": "Unix"
 			}
 		}
@@ -221,20 +258,26 @@
 		"/home/wiz/miniproject/olms/olms",
 		"/home/wiz/miniproject/olms/static",
 		"/home/wiz/miniproject/olms/static/user_login",
+		"/home/wiz/miniproject/olms/static/user_login/css",
 		"/home/wiz/miniproject/olms/templates",
 		"/home/wiz/miniproject/olms/templates/user_login",
 		"/home/wiz/miniproject/olms/user_login"
 	],
 	"file_history":
 	[
+		"/home/wiz/miniproject/olms/user_login/urls.py",
+		"/home/wiz/miniproject/olms/templates/user_login/register.html",
+		"/home/wiz/miniproject/olms/user_login/models.py",
+		"/home/wiz/miniproject/olms/user_login/registration.py",
 		"/home/wiz/miniproject/olms/templates/user_login/base.html",
-		"/home/wiz/miniproject/olms/templates/home.html",
 		"/home/wiz/miniproject/olms/templates/user_login/home.html",
+		"/home/wiz/miniproject/olms/templates/user_login/welcome.html",
+		"/home/wiz/miniproject/olms/static/user_login/css/form.css",
+		"/home/wiz/miniproject/olms/templates/home.html",
 		"/home/wiz/miniproject/olms/olms/settings.py",
 		"/home/wiz/miniproject/olms/user_login/views.py",
 		"/home/wiz/miniproject/olms/user_login/statics/css/form.css",
 		"/home/wiz/miniproject/olms/olms/urls.py",
-		"/home/wiz/miniproject/olms/user_login/urls.py",
 		"/home/wiz/miniproject/olms/user_login/migrations/views.py",
 		"/home/wiz/lwc/tango_withdjango_project/templates/userlogin/welcome.html",
 		"/home/wiz/lwc/tango_withdjango_project/templates/userlogin/base.html",
@@ -324,54 +367,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "templates/user_login/home.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2547,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								353,
-								353
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "user_login/forms.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 71,
+						"buffer_size": 668,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								70,
-								70
+								581,
+								581
 							]
 						],
 						"settings":
@@ -382,7 +395,121 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "user_login/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 191,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								110,
+								110
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "user_login/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1156,
+								1156
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 146.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "templates/user_login/login.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2572,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1364,
+								1364
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 415.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "templates/user_login/welcome.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 104,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
