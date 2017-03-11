@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>{% block title %}Login {% endblock %}</title>
+  {% block title %}
+  <title>Login</title>
+  {% endblock %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
    {% load staticfiles %}
@@ -12,7 +14,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <!-- <div class="container">
   <div class="jumbotron" style="color:red">
   </div>
@@ -22,26 +23,22 @@
 </div>
 <!-- login box -->
 <center>
-
-</form>
   <div class="login">
   {% load staticfiles %}
     <img src="{% static "user_login/img/logo.png" %}" class="logo" alt="Mec Logo" />
-    {% block form %}
     <form name="LoginForm" action="/user/login/" method="POST">
     {% csrf_token %}
       <!-- <fieldset> -->
-      
+      {% block form %}
       <br>
       {{ form }}
       <br>
        <!--  <input type="text" id="username" name="username" placeholder="Username" />
         <input type="password" id="password" name="password" placeholder="password" /> -->
         <input type="submit" name="submit_form" value="Sign in" />
-        
+        {% endblock %}
       <!-- </fieldset>  -->
     </form>
-    {% endblock %}
   </div>
 <center> 
 <br><br>

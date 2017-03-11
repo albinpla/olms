@@ -1,0 +1,28 @@
+p=User.objects.get(user=request.user)
+getuser
+class Profile(models.Model):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+    admissionno = models.CharField(max_length=7)
+    choice = (
+        ('PC', 'Placement_Cell'),
+        ('TC', 'Training_Cell'),
+        ('ST', 'Student'),
+    )
+    image= models.FileField(default='profile-pics-17.png')
+    status = models.CharField(max_length=2, choices=choice, default='ST')
+    standard=models.CharField(max_length=5,default="CSA")
+    name=models.CharField(max_length=14,unique=True)
+    slug=models.SlugField(max_length=14)
+    def _str_(self):
+        return self.user.email
+
+    def __unicode__(self):
+        return self.user.email
+
+
+{% if user.is_authenticated %}
+        <form name="redirect" action="/user/login/" method="POST">
+  {% csrf_token %}
+  <input type="submit" class="btn btn-success" name="submit_form" value="Sign in" />
+</form>
+<!-- {% else %} -->

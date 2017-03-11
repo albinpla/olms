@@ -1,0 +1,28 @@
+.login {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 5%;
+    /*padding: 36px;*/
+    width: 60%;
+    min-width: 250px;
+    min-height: 150px;
+    max-width: 450px;
+    max-height: 350px;
+    position: relative;
+}
+
+.logo{
+    width: 105px;
+    height: 105px;
+    border-radius: 50px;
+}
+
+.tit{
+    color: grey;
+    padding: 40px;
+    text-align: center;
+}
+
+.bg-grey {
+    background-color: #f6f6f6;
+}
