@@ -4,20 +4,44 @@
 		"selected_items":
 		[
 			[
-				"u",
-				"url"
+				"Us",
+				"UserprofileForm"
+			],
+			[
+				"pr",
+				"profile_form"
+			],
+			[
+				"U",
+				"UserprofileForm"
+			],
+			[
+				"user",
+				"UserProfileForm"
+			],
+			[
+				"M",
+				"ModelForm"
 			],
 			[
 				"re",
 				"request"
 			],
 			[
-				"a",
-				"authenticate"
+				"fo",
+				"form\tTag"
 			],
 			[
-				"user",
-				"username"
+				"lo",
+				"login_required"
+			],
+			[
+				"u",
+				"url"
+			],
+			[
+				"a",
+				"authenticate"
 			],
 			[
 				"n",
@@ -26,10 +50,6 @@
 			[
 				"ret",
 				"return"
-			],
-			[
-				"lo",
-				"login"
 			],
 			[
 				"is",
@@ -239,19 +259,24 @@
 	],
 	"file_history":
 	[
-		"/home/wiz/miniproject/olms/user_login/forms.py",
 		"/home/wiz/miniproject/olms/user_login/registration.py",
-		"/home/wiz/miniproject/olms/user_login/urls.py",
-		"/home/wiz/miniproject/olms/user_login/views.py",
-		"/home/wiz/miniproject/olms/templates/user_login/login.html",
-		"/home/wiz/miniproject/olms/static/user_login/css/form.css",
-		"/home/wiz/miniproject/olms/templates/user_login/welcome.html",
-		"/home/wiz/miniproject/olms/templates/user_login/register.html",
+		"/home/wiz/miniproject/olms/user_login/forms.py",
 		"/home/wiz/miniproject/olms/user_login/models.py",
+		"/home/wiz/miniproject/olms/user_login/views.py",
+		"/home/wiz/miniproject/olms/templates/user_login/hi.html",
+		"/home/wiz/miniproject/olms/templates/user_login/register.html",
+		"/home/wiz/miniproject/olms/user_login/admin.py",
+		"/home/wiz/miniproject/olms/olms/settings.py",
+		"/home/wiz/miniproject/olms/user_login/urls.py",
+		"/home/wiz/miniproject/olms/olms/code.txt",
+		"/home/wiz/miniproject/olms/templates/user_login/login.html",
+		"/home/wiz/miniproject/olms/templates/base.html",
+		"/home/wiz/miniproject/olms/static/user_login/css/form.css",
+		"/home/wiz/miniproject/olms/static/user_login/css/custcss.css",
+		"/home/wiz/miniproject/olms/templates/user_login/welcome.html",
 		"/home/wiz/miniproject/olms/templates/user_login/base.html",
 		"/home/wiz/miniproject/olms/templates/user_login/home.html",
 		"/home/wiz/miniproject/olms/templates/home.html",
-		"/home/wiz/miniproject/olms/olms/settings.py",
 		"/home/wiz/miniproject/olms/user_login/statics/css/form.css",
 		"/home/wiz/miniproject/olms/olms/urls.py",
 		"/home/wiz/miniproject/olms/user_login/migrations/views.py",

@@ -55,7 +55,7 @@ def user_logout(request):
 	# Since we know the user is logged in, we can now just log them out.
 	logout(request)
 	# Take the user back to the homepage.
-	return HttpResponseRedirect('/user/')
+	return HttpResponseRedirect('/user/login/')
 
 def home(request):
 	context={}
