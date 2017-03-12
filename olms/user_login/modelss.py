@@ -29,10 +29,10 @@ class department(models.Model):
 	hod = models.OneToOneField(User)
 
 	def _str_(self):
-		return self.depart
+		return self.department
 
 	def __unicode__(self):
-		return self.depart
+		return self.department
 
 class leave_history(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -55,11 +55,11 @@ class leave_history(models.Model):
 
 class leave_statistics(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
-	casual = models.IntegerField(default=0)
-	vacation = models.IntegerField(default=0)
-	conpens = models.IntegerField(default=0)
-	earned = models.IntegerField(default=0)
-	half_paid = models.IntegerField(default=0)
+	casual = models.IntegerField()
+	vacation = models.IntegerField()
+	conpens = models.IntegerField()
+	earned = models.IntegerField()
+	half_paid = models.IntegerField()
 
 	def _str_(self):
 		return self.user.username
