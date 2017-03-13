@@ -4,6 +4,106 @@
 		"selected_items":
 		[
 			[
+				"l",
+				"lev_stat_admin"
+			],
+			[
+				"le",
+				"leave_statistics"
+			],
+			[
+				"c",
+				"choices"
+			],
+			[
+				"de",
+				"department"
+			],
+			[
+				"E",
+				"Empadmin"
+			],
+			[
+				"F",
+				"ForeignKey"
+			],
+			[
+				"us",
+				"user"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"__",
+				"__unicode__"
+			],
+			[
+				"f",
+				"False"
+			],
+			[
+				"B",
+				"BooleanField"
+			],
+			[
+				"u",
+				"username"
+			],
+			[
+				"C",
+				"CharField"
+			],
+			[
+				"dep",
+				"department"
+			],
+			[
+				"bor",
+				"border-collapse"
+			],
+			[
+				"bo",
+				"border-radius"
+			],
+			[
+				"bord",
+				"border-color"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"b",
+				"background-color"
+			],
+			[
+				"t",
+				"transparent"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"i",
+				"input\tTag"
+			],
+			[
+				"bg",
+				"background-color"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
 				"Us",
 				"UserprofileForm"
 			],
@@ -16,10 +116,6 @@
 				"UserprofileForm"
 			],
 			[
-				"user",
-				"UserProfileForm"
-			],
-			[
 				"M",
 				"ModelForm"
 			],
@@ -28,16 +124,8 @@
 				"request"
 			],
 			[
-				"fo",
-				"form\tTag"
-			],
-			[
 				"lo",
 				"login_required"
-			],
-			[
-				"u",
-				"url"
 			],
 			[
 				"a",
@@ -60,10 +148,6 @@
 				"title\tTag"
 			],
 			[
-				"st",
-				"STATIC_URL"
-			],
-			[
 				"S",
 				"STATIC_URL"
 			],
@@ -78,10 +162,6 @@
 			[
 				"r",
 				"rango"
-			],
-			[
-				"f",
-				"from"
 			],
 			[
 				"in",
@@ -116,10 +196,6 @@
 				"margin"
 			],
 			[
-				"c",
-				"container"
-			],
-			[
 				"bod",
 				"border"
 			],
@@ -144,10 +220,6 @@
 				"align-self"
 			],
 			[
-				"border",
-				"border-radius"
-			],
-			[
 				"backgro",
 				"background-color"
 			],
@@ -156,16 +228,8 @@
 				"box-sizing"
 			],
 			[
-				"bord",
-				"border-radius"
-			],
-			[
 				"_",
 				"_password"
-			],
-			[
-				"col",
-				"col-xs-4"
 			],
 			[
 				"di",
@@ -199,6 +263,23 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "templates/user_login/hi.html",
+			"settings":
+			{
+				"buffer_size": 3293,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/base_profile.html",
+			"settings":
+			{
+				"buffer_size": 2666,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -253,26 +334,26 @@
 		"/home/wiz/miniproject/olms/static",
 		"/home/wiz/miniproject/olms/static/user_login",
 		"/home/wiz/miniproject/olms/static/user_login/css",
-		"/home/wiz/miniproject/olms/templates",
-		"/home/wiz/miniproject/olms/templates/user_login",
 		"/home/wiz/miniproject/olms/user_login"
 	],
 	"file_history":
 	[
+		"/home/wiz/miniproject/olms/user_login/admin.py",
+		"/home/wiz/miniproject/olms/user_login/models.py",
+		"/home/wiz/miniproject/olms/user_login/modelss.py",
+		"/home/wiz/miniproject/olms/user_login/modelsss.py",
+		"/home/wiz/miniproject/olms/templates/user_login/hi.html",
+		"/home/wiz/miniproject/olms/olms/code.txt",
+		"/home/wiz/miniproject/olms/static/user_login/css/custcss.css",
+		"/home/wiz/miniproject/olms/static/user_login/css/form.css",
+		"/home/wiz/miniproject/olms/templates/user_login/login.html",
+		"/home/wiz/miniproject/olms/user_login/urls.py",
 		"/home/wiz/miniproject/olms/user_login/registration.py",
 		"/home/wiz/miniproject/olms/user_login/forms.py",
-		"/home/wiz/miniproject/olms/user_login/models.py",
 		"/home/wiz/miniproject/olms/user_login/views.py",
-		"/home/wiz/miniproject/olms/templates/user_login/hi.html",
 		"/home/wiz/miniproject/olms/templates/user_login/register.html",
-		"/home/wiz/miniproject/olms/user_login/admin.py",
 		"/home/wiz/miniproject/olms/olms/settings.py",
-		"/home/wiz/miniproject/olms/user_login/urls.py",
-		"/home/wiz/miniproject/olms/olms/code.txt",
-		"/home/wiz/miniproject/olms/templates/user_login/login.html",
 		"/home/wiz/miniproject/olms/templates/base.html",
-		"/home/wiz/miniproject/olms/static/user_login/css/form.css",
-		"/home/wiz/miniproject/olms/static/user_login/css/custcss.css",
 		"/home/wiz/miniproject/olms/templates/user_login/welcome.html",
 		"/home/wiz/miniproject/olms/templates/user_login/base.html",
 		"/home/wiz/miniproject/olms/templates/user_login/home.html",
@@ -368,8 +449,69 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "templates/user_login/hi.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3293,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3293,
+								3293
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "templates/base_profile.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2666,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2666,
+								2666
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1030.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

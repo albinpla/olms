@@ -1,5 +1,7 @@
 from user_login.forms import UserForm,UserprofileForm
 from django.shortcuts import render
+from .models import Employee,leave_statistics
+from django.contrib.auth.models import User
 
 def register(request):
 
@@ -26,6 +28,7 @@ def register(request):
             profile = profile_form.save(commit=False)
             profile.user = user
             profile.save()
+            add_leave(emp=user)
 
             # Update our variable to tell the template registration was successful.
             registered = True
@@ -46,3 +49,17 @@ def register(request):
     return render(request,
             'user_login/register.html',
             {'user_form': user_form,'profile_form':profile_form, 'registered': registered} )
+
+def add_leave(emp):
+    
+    if emp.is_staff!=True:
+        leave = leave_statistics.objects.get_or_create(user=emp)[0]
+        leave.casual = 100
+        leave.vacation = 100
+        leave.copens = 0
+        leave.earned = 0
+        leave.half_paid = 0
+        leave.save()
+        return leave
+    else:
+        return None        
