@@ -66,4 +66,5 @@ def home(request):
 def userpage(request):
         profile = Employee.objects.get(user=request.user)
         template='user_login/hi.html'
+        print(request.user.get_username())
         return render(request,template,{'profile':profile})      

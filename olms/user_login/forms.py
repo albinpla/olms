@@ -29,7 +29,7 @@ class UserprofileForm(forms.ModelForm):
 class leave_app_form(forms.Form):
 	startdate = forms.DateField(label="",widget=forms.DateInput(attrs={'placeholder':'Start Date'})) 
 	enddate = forms.DateField(label="",widget=forms.DateInput(attrs={'placeholder':'End Date'})) 
-	des = forms.CharField(label="",widget=forms.TextInput(attrs={'placeholder':'Leave reason'}))
+	des = forms.CharField(label="",widget=forms.TextInput(attrs={'placeholder':'Leave reason','height':'100','width':'100'}))
 	half_day = forms.IntegerField(label="",widget=forms.NumberInput(attrs={'placeholder':'Start No of Halfdays'}))
 
 	class Meta:
