@@ -9,18 +9,18 @@ from .models import Employee
 # Create your views here.
 
 class user_login(View):
-	def get(self,request):
-		form=loginform
-		context={"form":form}
-		template='user_login/login.html'
-		return render(request,template,context)
+        def get(self,request):
+                form=loginform
+                context={"form":form}
+                template='user_login/login.html'
+                return render(request,template,context)
 
 
 
 
-	def post(self,request):
-		# If the request is a HTTP POST, try to pull out the relevant information.
-		# Gather the username and password provided by the user.
+        def post(self,request):
+                # If the request is a HTTP POST, try to pull out the relevant information.
+                # Gather the username and password provided by the user.
         # This information is obtained from the login form.
                 # We use request.POST.get('<variable>') as opposed to request.POST['<variable>'],
                 # because the request.POST.get('<variable>') returns None, if the value does not exist,
@@ -35,32 +35,32 @@ class user_login(View):
                 # If None (Python's way of representing the absence of a value), no user
                 # with matching credentials was found.
                 if user:
-                	# Is the account active? It could have been disabled.
-                	if user.is_active:
-                		# If the account is valid and active, we can log the user in.
-                		# We'll send the user back to the homepage.
-                		login(request, user)
+                        # Is the account active? It could have been disabled.
+                        if user.is_active:
+                                # If the account is valid and active, we can log the user in.
+                                # We'll send the user back to the homepage.
+                                login(request, user)
                                 print(request.POST['username'],request.POST['password'],user.username)
-                		return redirect('/user/hello/')
-                	else:
-                		# An inactive account was used - no logging in!
-                		return HttpResponse("Your Rango account is disabled.")
+                                return redirect('/user/hello/')
+                        else:
+                                # An inactive account was used - no logging in!
+                                return HttpResponse("Your account is disabled.")
                 else:
-                	# Bad login details were provided. So we can't log the user in.
-                	print("Invalid login details: {0}, {1}".format(username, password))
-                	return HttpResponse("Invalid login details supplied.")
+                        # Bad login details were provided. So we can't log the user in.
+                        print("Invalid login details: {0}, {1}".format(username, password))
+                        return HttpResponse("Invalid login details supplied.")
 
 @login_required
 def user_logout(request):
-	# Since we know the user is logged in, we can now just log them out.
-	logout(request)
-	# Take the user back to the homepage.
-	return HttpResponseRedirect('/user/login/')
+        # Since we know the user is logged in, we can now just log them out.
+        logout(request)
+        # Take the user back to the homepage.
+        return HttpResponseRedirect('/user/login/')
 
 def home(request):
-	context={}
-	template='user_login/welcome.html'
-	return render(request,template,context)
+        context={}
+        template='user_login/welcome.html'
+        return render(request,template,context)
 
 @login_required
 def userpage(request):

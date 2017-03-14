@@ -4,12 +4,72 @@
 		"selected_items":
 		[
 			[
+				"lea",
+				"leave_app"
+			],
+			[
+				"fl",
+				"flag"
+			],
+			[
 				"l",
-				"lev_stat_admin"
+				"leave_stat"
+			],
+			[
+				"ha",
+				"half_day"
 			],
 			[
 				"le",
-				"leave_statistics"
+				"leave_app"
+			],
+			[
+				"h",
+				"half_day"
+			],
+			[
+				"haa",
+				"half_day"
+			],
+			[
+				"ca",
+				"casual"
+			],
+			[
+				"leave",
+				"leave_app"
+			],
+			[
+				"pr",
+				"print"
+			],
+			[
+				"g",
+				"get_username"
+			],
+			[
+				"s",
+				"startdate"
+			],
+			[
+				"w",
+				"widget"
+			],
+			[
+				"def",
+				"default"
+			],
+			[
+				"Http",
+				"HttpResponse"
+			],
+			[
+				"htt",
+				"Http404"
+			],
+			[
+				"U",
+				"UserForm"
 			],
 			[
 				"c",
@@ -108,14 +168,6 @@
 				"UserprofileForm"
 			],
 			[
-				"pr",
-				"profile_form"
-			],
-			[
-				"U",
-				"UserprofileForm"
-			],
-			[
 				"M",
 				"ModelForm"
 			],
@@ -174,10 +226,6 @@
 			[
 				"ulrs",
 				"urls"
-			],
-			[
-				"h",
-				"HttpResponse"
 			],
 			[
 				"A",
@@ -264,19 +312,10 @@
 	"buffers":
 	[
 		{
-			"file": "templates/user_login/hi.html",
+			"file": "user_login/models.py",
 			"settings":
 			{
-				"buffer_size": 3293,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "templates/base_profile.html",
-			"settings":
-			{
-				"buffer_size": 2666,
-				"encoding": "UTF-8",
+				"buffer_size": 2088,
 				"line_ending": "Unix"
 			}
 		}
@@ -330,36 +369,45 @@
 	"expanded_folders":
 	[
 		"/home/wiz/miniproject/olms",
-		"/home/wiz/miniproject/olms/olms",
 		"/home/wiz/miniproject/olms/static",
-		"/home/wiz/miniproject/olms/static/user_login",
-		"/home/wiz/miniproject/olms/static/user_login/css",
-		"/home/wiz/miniproject/olms/user_login"
+		"/home/wiz/miniproject/olms/templates",
+		"/home/wiz/miniproject/olms/user_login",
+		"/home/wiz/miniproject/olms/user_login/migrations"
 	],
 	"file_history":
 	[
+		"/home/wiz/miniproject/olms/user_login/migrations/0001_initial.py",
 		"/home/wiz/miniproject/olms/user_login/admin.py",
+		"/home/wiz/miniproject/olms/user_login/apps.py",
+		"/home/wiz/miniproject/olms/user_login/forms.py",
+		"/home/wiz/miniproject/olms/user_login/leave_application.py",
 		"/home/wiz/miniproject/olms/user_login/models.py",
 		"/home/wiz/miniproject/olms/user_login/modelss.py",
 		"/home/wiz/miniproject/olms/user_login/modelsss.py",
-		"/home/wiz/miniproject/olms/templates/user_login/hi.html",
+		"/home/wiz/miniproject/olms/user_login/registration.py",
+		"/home/wiz/miniproject/olms/user_login/tests.py",
+		"/home/wiz/miniproject/olms/user_login/urls.py",
+		"/home/wiz/miniproject/olms/user_login/views.py",
+		"/home/wiz/miniproject/olms/manage.py",
+		"/home/wiz/miniproject/olms/olms.sublime-project",
 		"/home/wiz/miniproject/olms/olms/code.txt",
+		"/home/wiz/miniproject/olms/olms/settings.py",
+		"/home/wiz/miniproject/olms/olms/urls.py",
+		"/home/wiz/miniproject/olms/olms/wsgi.py",
 		"/home/wiz/miniproject/olms/static/user_login/css/custcss.css",
 		"/home/wiz/miniproject/olms/static/user_login/css/form.css",
-		"/home/wiz/miniproject/olms/templates/user_login/login.html",
-		"/home/wiz/miniproject/olms/user_login/urls.py",
-		"/home/wiz/miniproject/olms/user_login/registration.py",
-		"/home/wiz/miniproject/olms/user_login/forms.py",
-		"/home/wiz/miniproject/olms/user_login/views.py",
-		"/home/wiz/miniproject/olms/templates/user_login/register.html",
-		"/home/wiz/miniproject/olms/olms/settings.py",
-		"/home/wiz/miniproject/olms/templates/base.html",
-		"/home/wiz/miniproject/olms/templates/user_login/welcome.html",
+		"/home/wiz/miniproject/olms/templates/user_login/applyleave.html",
 		"/home/wiz/miniproject/olms/templates/user_login/base.html",
+		"/home/wiz/miniproject/olms/templates/user_login/hi.html",
+		"/home/wiz/miniproject/olms/templates/user_login/login.html",
+		"/home/wiz/miniproject/olms/templates/user_login/register.html",
+		"/home/wiz/miniproject/olms/templates/user_login/welcome.html",
+		"/home/wiz/miniproject/olms/templates/base.html",
+		"/home/wiz/miniproject/olms/templates/base_profile.html",
+		"/home/wiz/miniproject/olms/templates/login.html",
 		"/home/wiz/miniproject/olms/templates/user_login/home.html",
 		"/home/wiz/miniproject/olms/templates/home.html",
 		"/home/wiz/miniproject/olms/user_login/statics/css/form.css",
-		"/home/wiz/miniproject/olms/olms/urls.py",
 		"/home/wiz/miniproject/olms/user_login/migrations/views.py",
 		"/home/wiz/lwc/tango_withdjango_project/templates/userlogin/welcome.html",
 		"/home/wiz/lwc/tango_withdjango_project/templates/userlogin/base.html",
@@ -449,64 +497,34 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "templates/user_login/hi.html",
+					"file": "user_login/models.py",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 3293,
+						"buffer_size": 2088,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3293,
-								3293
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "templates/base_profile.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2666,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2666,
-								2666
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1030.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
