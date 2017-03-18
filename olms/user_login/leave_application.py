@@ -42,7 +42,7 @@ class leave_apply(View):
             check_leave(leave_app=leave_app,leave_stat=leave_stat)
             print(leave_stat.casual)
             leave_app.save()
-            return HttpResponse('Leave Application Successful!!<br><a href="\user\hello">Go home</a>')
+            return HttpResponse('Leave Application Successful!!')
 
 def check_leave(leave_app,leave_stat):
     flag=False
