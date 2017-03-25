@@ -6,6 +6,8 @@ from django.db import models
 
 class Employee(models.Model):
     user = models.OneToOneField(User)
+    # leave_his = models.ForeignKey(leave_history, on_delete=models.CASCADE)
+    # leave_stat = models.ForeignKey(leave_statistics, on_delete=models.CASCADE)
     dept=( 
         
         ('cs','Computer Science'),
@@ -36,16 +38,16 @@ class department(models.Model):
         return self.depart
 
 class leave_history(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    startdate = models.DateField(auto_now_add = False,auto_now=True)
-    enddate = models.DateField(auto_now_add = False,auto_now=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    startdate = models.DateField()
+    enddate = models.DateField()
     choices=(
         ('cl','casual leave'),
         ('hp','half paid')
         )
     leavetype = models.CharField(max_length=20,choices=choices)
     status = models.BooleanField(default=False)
-    # recom = models.BooleanField(default=False)
+    recom = models.BooleanField(default=False)
     des = models.CharField(max_length=300)
     half_day = models.IntegerField()
 
@@ -56,7 +58,9 @@ class leave_history(models.Model):
         return self.user.username       
 
 class leave_statistics(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    # user = models.ForeignKey(User, on_delete=models.CASCADE)
     casual = models.IntegerField(default=0)
     vacation = models.IntegerField(default=0)
     conpens = models.IntegerField(default=0)
@@ -67,4 +71,7 @@ class leave_statistics(models.Model):
         return self.user.username
 
     def __unicode__(self):
-        return self.user.username   
+        return self.user.username 
+
+
+
