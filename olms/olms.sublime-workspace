@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"e",
+				"exclude"
+			],
+			[
 				"lea",
 				"leave_app"
 			],
@@ -312,10 +316,66 @@
 	"buffers":
 	[
 		{
-			"file": "user_login/models.py",
+			"file": "user_login/registration.py",
 			"settings":
 			{
-				"buffer_size": 2088,
+				"buffer_size": 2381,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "from __future__ import unicode_literals\nfrom django.contrib.auth.models import User\nfrom django.db import models\n\n# Create your models here.\n\nclass Employee(models.Model):\n    user = models.OneToOneField(User)\n    dept=( \n        \n        ('cs','Computer Science'),\n        ('EC','Electronics and Communication'),\n        ('EEE','Electrical and Electronic'),\n        ('Mech','Mechanical'),\n        ('BE','Biomedial'),\n        ('AS','Applied Science'),\n        ('NT','Non-Teching')\n        )\n    department = models.CharField(max_length=4,choices=dept,default='NT')\n    Tflag = models.BooleanField(default=False)\n\n    def _str_(self):\n        return self.user.username\n\n    def __unicode__(self):\n        return self.user.username   \n\nclass department(models.Model):\n    depart=models.CharField(max_length=4,primary_key=True)\n    hod = models.OneToOneField(User)\n\n    def _str_(self):\n        return self.depart\n\n    def __unicode__(self):\n        return self.depart\n\nclass leave_history(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    startdate = models.DateField(auto_now_add = False,auto_now=True)\n    enddate = models.DateField(auto_now_add = False,auto_now=True)\n    choices=(\n        ('cl','casual leave'),\n        ('hp','half paid')\n        )\n    leavetype = models.CharField(max_length=20,choices=choices)\n    status = models.BooleanField(default=False)\n    # recom = models.BooleanField(default=False)\n    des = models.CharField(max_length=300)\n    half_day = models.IntegerField()\n\n    def _str_(self):\n        return self.user.username\n\n    def __unicode__(self):\n        return self.user.username       \n\nclass leave_statistics(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    casual = models.IntegerField(default=0)\n    vacation = models.IntegerField(default=0)\n    conpens = models.IntegerField(default=0)\n    earned = models.IntegerField(default=0)\n    half_paid = models.IntegerField(default=0)\n\n    def _str_(self):\n        return self.user.username\n\n    def __unicode__(self):\n        return self.user.username   \n",
+			"file": "user_login/models.py",
+			"file_size": 2088,
+			"file_write_time": 131339400443208967,
+			"settings":
+			{
+				"buffer_size": 2097,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "user_login/urls.py",
+			"settings":
+			{
+				"buffer_size": 462,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "user_login/views.py",
+			"settings":
+			{
+				"buffer_size": 3344,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "user_login/forms.py",
+			"settings":
+			{
+				"buffer_size": 1928,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "user_login/admin.py",
+			"settings":
+			{
+				"buffer_size": 946,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "from user_login.forms import leave_app_form\nfrom django.views import View\nfrom django.shortcuts import render,HttpResponse\nfrom user_login.forms import UserForm,UserprofileForm\nfrom .models import Employee,leave_statistics\nfrom django.contrib.auth.decorators import login_required\nfrom django.contrib.auth.models import User\nfrom django.http import Http404\n\nclass leave_apply(View):\n    # set to false initially as request is not submitted\n    applied = False\n    template=\"\"\n    def get(self,request):\n        applied = False\n        try:\n            profile = Employee.objects.get(user=request.user)\n        except TypeError:\n            return HttpResponse('No user logged in:-(:-(<br>Please <a href=\"/user/login/\">login</a>')\n        if profile.user.is_authenticated:\n            template=\"user_login/applyleave.html\"\n            return render(request,template,{'profile':profile,'leave_app_form': leave_app_form, 'applied': applied} )\n\n    def post(self,request):\n        # If it's a HTTP POST, we're interested in processing form data.\n        # Attempt to grab information from the raw form information.\n        leave_form = leave_app_form(data=request.POST)\n        # retrieve user\n        profile = Employee.objects.get(user=request.user)\n        # If the two forms are valid...\n        if leave_form.is_valid():\n            # leave_form not saved\n            leave_app = leave_form.save(commit=False)\n            # setting user of leaveform\n            leave_app.user=profile.user\n            #returning the leave_history of that user to leave_stat\n            leave_stat=leave_statistics.objects.get(user=profile.user)\n            # print(leave_app.user.get_username())\n            # print(leave_stat.user.get_username())\n            # print(leave_app.half_day)\n            # print(leave_app.leavetype)\n            check_leave(leave_app=leave_app,leave_stat=leave_stat)\n            print(leave_stat.casual)\n            leave_app.save()\n            return HttpResponse('Leave Application Successful!!<br><a href=\"\\user\\hello\">Go home</a>')\n\ndef check_leave(leave_app,leave_stat):\n    flag=False\n    leave={\n        'cl','hp'\n        }\n    if leave_app.leavetype == 'cl':\n        if leave_app.half_day < leave_stat.casual:\n            leave_stat.casual-= leave_app.half_day\n            flag=True\n\n    elif leave_app.leavetype == 'hp':\n        if leave_app.half_day < leave_stat.casual:\n            leave_stat.half_paid-= leave_app.half_day\n            flag=True\n    leave_stat.save()\n    if flag==False:\n        return HttpResponse('Incorrect leave Application<br><a href=\"/user/apply_leave/\">Redo</a>')     ",
+			"file": "user_login/leave_application.py",
+			"file_size": 2617,
+			"file_write_time": 131339400457389171,
+			"settings":
+			{
+				"buffer_size": 2617,
 				"line_ending": "Unix"
 			}
 		}
@@ -369,8 +429,10 @@
 	"expanded_folders":
 	[
 		"/home/wiz/miniproject/olms",
+		"/home/wiz/miniproject/olms/olms",
 		"/home/wiz/miniproject/olms/static",
 		"/home/wiz/miniproject/olms/templates",
+		"/home/wiz/miniproject/olms/templates/user_login",
 		"/home/wiz/miniproject/olms/user_login",
 		"/home/wiz/miniproject/olms/user_login/migrations"
 	],
@@ -497,16 +559,164 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "user_login/registration.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2381,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2095,
+								2095
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 205.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
 					"file": "user_login/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2097,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								239,
+								239
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "user_login/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 462,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								333,
+								333
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "user_login/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3344,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2769,
+								2769
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 8,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 325.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "user_login/forms.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1928,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								439,
+								439
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "user_login/admin.py",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 2088,
+						"buffer_size": 946,
 						"regions":
 						{
 						},
@@ -527,7 +737,37 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "user_login/leave_application.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2617,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1946,
+								1946
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

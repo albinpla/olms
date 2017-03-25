@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.views import View
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from .models import Employee,leave_history
 from .models import Employee
 # Create your views here.
 
@@ -67,4 +68,33 @@ def userpage(request):
         profile = Employee.objects.get(user=request.user)
         template='user_login/hi.html'
         print(request.user.get_username())
-        return render(request,template,{'profile':profile})      
+        return render(request,template,{'profile':profile})    
+          
+class leave_cancel(View):
+        def get(self,request):
+                template = 'user_login/leave_cancel.html'
+                profile = Employee.objects.get(user=request.user)
+                return render(request, template, {'profile': profile})
+
+        def post(self,request):
+                template='user_login/leave_cancel.html'
+                profile = Employee.objects.get(user=request.user)
+                return render(request,template,{'profile':profile})
+
+
+class leave_history(View):
+        def get(self,request):
+                template= 'user_login/leave_history.html'
+                profile = Employee.objects.get(user=request.user)
+                return render(request, template, {'profile': profile})
+        def post(self,request):
+                template='user_login/leave_history.html'
+                profile = Employee.objects.get(user=request.user)
+                history = leave_history.objects.get(user=request.user)
+                if history:
+                        print ("sucesss")
+
+                else:
+                        print ("error")
+                return render(request,template,{'profile':profile})
+

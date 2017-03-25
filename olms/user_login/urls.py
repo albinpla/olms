@@ -7,5 +7,7 @@ urlpatterns = [
     url(r'^register/',registration.register,name='register'),
     url(r'^hello/',views.userpage,name='userpage'),
     url(r'^logout/',views.user_logout,name='userlogout'),
-    url(r'^apply_leave/',leave_application.leave_apply.as_view(),name='leave_apply')  
+    url(r'^apply_leave/',leave_application.leave_apply.as_view(),name='leave_apply'),
+    url(r'^cancel_leave/',views.leave_cancel.as_view(),name='leave_cancel'),
+    url(r'^leave_history',views.leave_history.as_view(),name='leave_history')
 ]

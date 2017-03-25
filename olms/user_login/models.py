@@ -7,6 +7,7 @@ from django.db import models
 class Employee(models.Model):
     user = models.OneToOneField(User)
     dept=( 
+        
         ('cs','Computer Science'),
         ('EC','Electronics and Communication'),
         ('EEE','Electrical and Electronic'),
