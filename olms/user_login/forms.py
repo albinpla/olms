@@ -35,4 +35,4 @@ class leave_app_form(forms.ModelForm):
     class Meta:
         model = leave_history
         fields = '__all__'
-        exclude =('user','status')  
+        exclude =('user','status','recom')  

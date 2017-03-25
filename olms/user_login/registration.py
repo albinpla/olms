@@ -1,6 +1,6 @@
 from user_login.forms import UserForm,UserprofileForm
 from django.shortcuts import render
-from .models import Employee,leave_statistics
+from .models import Employee,leave_statistics,leave_history
 from django.contrib.auth.models import User
 
 def register(request):
@@ -27,6 +27,8 @@ def register(request):
 
             profile = profile_form.save(commit=False)
             profile.user = user
+            # profile.leave_his = None
+            # profile.leave_stat = None
             profile.save()
             add_leave(emp=user)
 
@@ -62,4 +64,7 @@ def add_leave(emp):
         leave.save()
         return leave
     else:
-        return None        
+        return None
+
+def add_his(emp):
+    pass  
