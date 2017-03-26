@@ -19,7 +19,8 @@ class leave_apply(View):
             return HttpResponse('No user logged in:-(:-(<br>Please <a href="/user/login/">login</a>')
         if profile.user.is_authenticated:
             template="user_login/applyleave.html"
-            return render(request,template,{'profile':profile,'leave_app_form': leave_app_form, 'applied': applied} )
+            leave_stat = leave_statistics.objects.get(user=profile.user)
+            return render(request,template,{'profile':profile,'leave_app_form': leave_app_form, 'applied': applied,'leave':leave_stat} )
 
     def post(self,request):
         # If it's a HTTP POST, we're interested in processing form data.
@@ -35,8 +36,8 @@ class leave_apply(View):
             leave_app.user=profile.user
             #returning the leave_history of that user to leave_stat
             leave_stat=leave_statistics.objects.get(user=profile.user)
-            print(leave_app.user.get_username())
-            print(leave_stat.user.get_username())
+            # print(leave_app.user.get_username())
+            # print(leave_stat.user.get_username())
             # print(leave_app.half_day)
             # print(leave_app.leavetype)
             check_leave(leave_app=leave_app,leave_stat=leave_stat)
