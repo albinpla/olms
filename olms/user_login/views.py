@@ -5,8 +5,8 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.views import View
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from .models import Employee,leave_history
-from .models import Employee
+from .models import *
+# from .models import Employee
 # Create your views here.
 
 class user_login(View):
@@ -84,17 +84,58 @@ class leave_cancel(View):
 
 class leave_history(View):
         def get(self,request):
-                template= 'user_login/leave_history.html'
+                template = 'user_login/leave_history.html'
                 profile = Employee.objects.get(user=request.user)
-                return render(request, template, {'profile': profile})
-        def post(self,request):
-                template='user_login/leave_history.html'
-                profile = Employee.objects.get(user=request.user)
-                history = leave_history.objects.get(user=request.user)
-                if history:
-                        print ("sucesss")
+                leave_hist = leave_history.objects.get(user=profile.user)
+                # history = leave_history.objects.get(user=request.user)
+                # history = leave_history.objects.all()
+                # history = leave_statistics.object.all()
+                if leave_stat:
+                        print ("sucesssyooo")
 
                 else:
                         print ("error")
+
+                return render(request, template, {'profile': profile})
+
+        def post(self,request):
+                template = 'user_login/leave_history.html'
+                profile = Employee.objects.get(user=request.user)
                 return render(request,template,{'profile':profile})
+
+class check_status(View):
+        def get(self,request):
+                template = 'user_login/check_status.html'
+                profile = Employee.objects.get(user=request.user)
+                return render(request, template, {'profile': profile})
+
+        def post(self,request):
+                template='user_login/check_status.html'
+                profile = Employee.objects.get(user=request.user)
+                return render(request,template,{'profile':profile})
+
+class statistics(View):
+        def get(self,request):
+                template = 'user_login/statistics.html'
+                profile = Employee.objects.get(user=request.user)
+                return render(request, template, {'profile': profile})
+
+        def post(self,request):
+                template='user_login/statistics.html'
+                profile = Employee.objects.get(user=request.user)
+                return render(request,template,{'profile':profile})
+
+class profile(View):
+        def get(self,request):
+                template = 'user_login/profile.html'
+                profile = Employee.objects.get(user=request.user)
+                return render(request, template, {'profile': profile})
+
+        def post(self,request):
+                template='user_login/profile.html'
+                profile = Employee.objects.get(user=request.user)
+                return render(request,template,{'profile':profile})
+
+
+
 

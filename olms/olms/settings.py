@@ -125,3 +125,9 @@ STATIC_URL = '/static/' # You may find this is already defined as such.
 STATICFILES_DIRS = (
     STATIC_PATH,
 )
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'lilium366@gmail.com'
+EMAIL_HOST_PASSWORD = 'learningwithcode'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
