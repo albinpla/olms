@@ -98,3 +98,41 @@ class leave_history(View):
                         print ("error")
                 return render(request,template,{'profile':profile})
 
+class check_status(View):
+        def get(self,request):
+                template = 'user_login/check_status.html'
+                profile = Employee.objects.get(user=request.user)
+                return render(request, template, {'profile': profile})
+
+        def post(self,request):
+                template='user_login/check_status.html'
+                profile = Employee.objects.get(user=request.user)
+                return render(request,template,{'profile':profile})
+
+class statistics(View):
+        def get(self,request):
+                template = 'user_login/statistics.html'
+                profile = Employee.objects.get(user=request.user)
+                return render(request, template, {'profile': profile})
+
+        def post(self,request):
+                template='user_login/statistics.html'
+                profile = Employee.objects.get(user=request.user)
+                return render(request,template,{'profile':profile})
+
+class profile(View):
+        def get(self,request):
+                template = 'user_login/profile.html'
+                profile = Employee.objects.get(user=request.user)
+                return render(request, template, {'profile': profile})
+
+        def post(self,request):
+                template='user_login/profile.html'
+                profile = Employee.objects.get(user=request.user)
+                return render(request,template,{'profile':profile})
+
+
+
+
+
+
